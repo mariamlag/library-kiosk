@@ -1,0 +1,259 @@
+
+{
+  "books": [
+    {
+      "id": "1a2b3c4d",
+      "title": "The Catcher in the Rye",
+      "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
+      "isBorrowed": true,
+      "category": "Coming-of-Age Novels"
+    },
+    {
+      "id": "5e6f7g8h",
+      "title": "To Kill a Mockingbird",
+      "about": "A novel by Harper Lee. The story of racial injustice in the American South.",
+      "isBorrowed": true,
+      "category": "Coming-of-Age Novels"
+    },
+    {
+      "id": "9i0j1k2l",
+      "title": "1984",
+      "about": "A dystopian novel by George Orwell. It explores the consequences of government surveillance.",
+      "isBorrowed": false,
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "3m4n5o6p",
+      "title": "The Great Gatsby",
+      "about": "A novel by F. Scott Fitzgerald. The story of Jay Gatsby and the American Dream.",
+      "isBorrowed": true,
+      "category": "Classic Literature"
+    },
+    {
+      "id": "7q8r9s0t",
+      "title": "Pride and Prejudice",
+      "isBorrowed": true,
+      "about": "A novel by Jane Austen. A story of love, class, and reputation in early 19th-century England.",
+      "category": "Classic Literature"
+    },
+    {
+      "id": "1u2v3w4x",
+      "title": "Brave New World",
+      "isBorrowed": false,
+      "about": "A dystopian novel by Aldous Huxley. It explores a futuristic society driven by technology.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "5y6z7a8b",
+      "title": "Moby-Dick",
+      "isBorrowed": true,
+      "about": "A novel by Herman Melville. The story of Captain Ahab's obsessive quest to catch a giant white whale.",
+      "category": "Classic Literature"
+    },
+    {
+      "id": "9c0d1e2f",
+      "title": "The Lord of the Rings",
+      "isBorrowed": false,
+      "about": "A fantasy novel by J.R.R. Tolkien. It follows the journey to destroy a powerful ring.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "3g4h5i6j",
+      "title": "The Hobbit",
+      "isBorrowed": true,
+      "about": "A fantasy novel by J.R.R. Tolkien. The prelude to The Lord of the Rings.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "7k8l9m0n",
+      "isBorrowed": true,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "about": "A fantasy novel by J.K. Rowling. The first book in the Harry Potter series.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "1o2p3q4r",
+      "title": "The Hunger Games",
+      "isBorrowed": true,
+      "about": "A dystopian novel by Suzanne Collins. It features a deadly competition.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "5s6t7u8v",
+      "title": "The Da Vinci Code",
+      "isBorrowed": false,
+      "about": "A mystery thriller by Dan Brown. It follows a code-breaking investigation.",
+      "category": "Mystery/Thriller"
+    },
+    {
+      "id": "9w0x1y2z",
+      "title": "The Shining",
+      "isBorrowed": false,
+      "about": "A horror novel by Stephen King. A family's experience in a haunted hotel.",
+      "category": "Horror"
+    },
+    {
+      "id": "3a4b5c6d",
+      "title": "The Road",
+      "isBorrowed": false,
+      "about": "A post-apocalyptic novel by Cormac McCarthy. A father and son's journey to survival.",
+      "category": "Post-Apocalyptic Fiction"
+    },
+    {
+      "id": "7e8f9g0h",
+      "title": "The Kite Runner",
+      "isBorrowed": false,
+      "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
+      "category": "Literary Fiction"
+    },
+    {
+      "id": "1i2j3k4l",
+      "title": "The Giver",
+      "isBorrowed": false,
+      "about": "A dystopian novel by Lois Lowry. The story of a world without pain.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "5m6n7o8p",
+      "title": "The Alchemist",
+      "isBorrowed": true,
+      "about": "A novel by Paulo Coelho. The journey of a shepherd in search of treasure.",
+      "category": "Literary Fiction"
+    },
+    {
+      "id": "9q0r1s2t",
+      "title": "The Girl with the Dragon Tattoo",
+      "isBorrowed": false,
+      "about": "A mystery novel by Stieg Larsson. A journalist's investigation into a disappearance.",
+      "category": "Mystery/Thriller"
+    },
+    {
+      "id": "3u4v5w6x",
+      "title": "The Catcher in the Rye",
+      "isBorrowed": false,
+      "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
+      "category": "Coming-of-Age Novels"
+    },
+    {
+      "id": "7y8z9a0b",
+      "title": "To Kill a Mockingbird",
+      "isBorrowed": false,
+      "about": "A novel by Harper Lee. The story of racial injustice in the American South.",
+      "category": "Coming-of-Age Novels"
+    },
+    {
+      "id": "1c2d3e4f",
+      "title": "1984",
+      "isBorrowed": false,
+      "about": "A dystopian novel by George Orwell. It explores the consequences of government surveillance.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "5g6h7i8j",
+      "title": "The Great Gatsby",
+      "isBorrowed": true,
+      "about": "A novel by F. Scott Fitzgerald. The story of Jay Gatsby and the American Dream.",
+      "category": "Classic Literature"
+    },
+    {
+      "id": "9k0l1m2n",
+      "title": "Pride and Prejudice",
+      "isBorrowed": true,
+      "about": "A novel by Jane Austen. A story of love, class, and reputation in early 19th-century England.",
+      "category": "Classic Literature"
+    },
+    {
+      "id": "3o4p5q6r",
+      "title": "Brave New World",
+      "isBorrowed": false,
+      "about": "A dystopian novel by Aldous Huxley. It explores a futuristic society driven by technology.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "7s8t9u0v",
+      "title": "Moby-Dick",
+      "isBorrowed": false,
+      "about": "A novel by Herman Melville. The story of Captain Ahab's obsessive quest to catch a giant white whale.",
+      "category": "Classic Literature"
+    },
+    {
+      "id": "1w2x3y4z",
+      "title": "The Lord of the Rings",
+      "isBorrowed": false,
+      "about": "A fantasy novel by J.R.R. Tolkien. It follows the journey to destroy a powerful ring.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "5a6b7c8d",
+      "title": "The Hobbit",
+      "isBorrowed": true,
+      "about": "A fantasy novel by J.R.R. Tolkien. The prelude to The Lord of the Rings.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "9e0f1g2h",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "isBorrowed": true,
+      "about": "A fantasy novel by J.K. Rowling. The first book in the Harry Potter series.",
+      "category": "Fantasy Novels"
+    },
+    {
+      "id": "3i4j5k6l",
+      "title": "The Hunger Games",
+      "isBorrowed": true,
+      "about": "A dystopian novel by Suzanne Collins. It features a deadly competition.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "7m8n9o0p",
+      "title": "The Da Vinci Code",
+      "isBorrowed": false,
+      "about": "A mystery thriller by Dan Brown. It follows a code-breaking investigation.",
+      "category": "Mystery/Thriller"
+    },
+    {
+      "id": "1q2r3s4t",
+      "title": "The Shining",
+      "isBorrowed": false,
+      "about": "A horror novel by Stephen King. A family's experience in a haunted hotel.",
+      "category": "Horror"
+    },
+    {
+      "id": "5u6v7w8x",
+      "title": "The Road",
+      "isBorrowed": false,
+      "about": "A post-apocalyptic novel by Cormac McCarthy. A father and son's journey to survival.",
+      "category": "Post-Apocalyptic Fiction"
+    },
+    {
+      "id": "9y0z1a2b",
+      "title": "The Kite Runner",
+      "isBorrowed": false,
+      "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
+      "category": "Literary Fiction"
+    },
+    {
+      "id": "3c4d5e6f",
+      "title": "The Giver",
+      "isBorrowed": true,
+      "about": "A dystopian novel by Lois Lowry. The story of a world without pain.",
+      "category": "Dystopian Fiction"
+    },
+    {
+      "id": "7g8h9i0j",
+      "title": "The Alchemist",
+      "isBorrowed": true,
+      "about": "A novel by Paulo Coelho. The journey of a shepherd in search of treasure.",
+      "category": "Literary Fiction"
+    },
+    {
+      "id": "1k2l3m4n",
+      "title": "The Girl with the Dragon Tattoo",
+      "isBorrowed": true,
+      "about": "A mystery novel by Stieg Larsson. A journalist's investigation into a disappearance.",
+      "category": "Mystery/Thriller"
+    }
+  ]
+    
+  }
+  

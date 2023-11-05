@@ -1,0 +1,19 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+
+body{
+  background-image: url(../public/2150793709.jpg);
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
