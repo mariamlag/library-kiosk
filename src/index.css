@@ -10,10 +10,14 @@ html {
 }
 
 body{
-  background-image: url(../public/2150793709.jpg);
+  background-image: url(/2150793709.jpg);
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
 
 }
-
+.link-no-underline {
+  text-decoration: none;
+}

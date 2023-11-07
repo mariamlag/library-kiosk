@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 import Books from './Books';
 import Categories from './categories';
+import Return from './Return';
+import { Link } from 'react-router-dom';
 
 
 export default function Landing() {
@@ -14,28 +16,27 @@ export default function Landing() {
     };
     const [selectedCategory, setSelectedCategory] = useState('');
 
-    // useEffect(() => {
-    //     fetch('https://www.googleapis.com/books/v1/volumes?q=search_query')
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       console.log(data.items[0].volumeInfo.title);
-    //     })
-    //   }, []);
-      
+    const [returnVisible, setReturnVisible] = useState(false);
+    const toggleReturn = () => {
+        setReturnVisible(!returnVisible);
+      };
   return (
     <Main>
             <Borrow onClick={toggleBooks}>
                 Borrow a Book
             </Borrow>
-            <Return>
-                Return a Book
-            </Return>
+            <Link to="/return" className="link-no-underline">
+                <Returnn onClick={toggleReturn}>Return a Book</Returnn>
+            </Link>
+      
             {showAvailableBooks && (
                 <>
                     <Categories onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory} />
                     {selectedCategory && <Books  selectedCategory={selectedCategory}/>}
-             </>
-)}
+                  
+             </>  
+                )}       
+            {returnVisible && <Return />} 
     </Main>
   )
 }
@@ -57,17 +58,24 @@ const SharedButton = styled.button`
   border-style: none;
   cursor: pointer;
   background-color: #ffffff;
-        color: #5d4e46;
+    color: #5d4e46;
+    box-shadow: 0 0 5px rgba(124, 222, 255, 0.867); 
+
     &:hover{
         color: #ffffff;
     background-color: #5d4e46;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.867); 
     }
+
+
 `;
-const Return = styled(SharedButton)`
+const Returnn = styled(SharedButton)`
     margin-top: 2rem;
     width: 50rem;
     margin: 3rem auto;
     height: fit-content;
+    text-decoration: none;
+
 `
 const Borrow = styled(SharedButton)`  
   width: 50rem;

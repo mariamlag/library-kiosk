@@ -1,5 +1,44 @@
-
 {
+  "user": [
+    {
+      "username": "mariam12",
+      "password": "mariam12",
+      "id": 1
+    },
+    {
+      "username": "mari123",
+      "password": "mari123",
+      "id": 2
+    },
+    {
+      "username": "mari11",
+      "password": "mari11",
+      "id": 3
+    },
+    {
+      "username": "mmm123",
+      "password": "mmm123",
+      "id": 4
+    },
+    {
+      "username": "mmm12",
+      "password": "mmm12",
+      "borrowedBooks": [],
+      "id": 5
+    },
+    {
+      "username": "mmm12",
+      "password": "mmm12",
+      "borrowedBooks": [],
+      "id": 6
+    },
+    {
+      "username": "lag123",
+      "password": "lag123",
+      "borrowedBooks": [],
+      "id": 7
+    }
+  ],
   "books": [
     {
       "id": "1a2b3c4d",
@@ -254,6 +293,4 @@
       "category": "Mystery/Thriller"
     }
   ]
-    
-  }
-  
+}

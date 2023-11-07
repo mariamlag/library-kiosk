@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, {useState} from 'react';
 import data from '../../data.json';
 import styled from 'styled-components';
 import Books from './Books';
-
 
 type Book = {
     title: string;
@@ -11,22 +11,20 @@ type Book = {
     isBorrowed: boolean;
   };
   
-  type CategoriesProps = {
+type CategoriesProps = {
     onSelectCategory: (category: string) => void;
     selectedCategory: string;
   };
 
 function Categories ({ onSelectCategory, selectedCategory }: CategoriesProps ) {
-    
 
-  const categories : string[] = data.books.reduce<string[]>((acc, book) => {
+
+  const categories : string[] = data.books.reduce((acc, book) => {
     if (book.category && !acc.includes(book.category)) {
       acc.push(book.category);
     }
     return acc;
   }, []);
-
-
 
 //   const filteredBooks = data.books.filter((book) => {
 //     return !book.isBorrowed ;
@@ -48,7 +46,7 @@ return (
                 {category}
             </Li>
         ))}
-        <Li  onClick={toggleBooks}>All</Li>
+        <Li  onClick={() => onSelectCategory("All")}>All</Li>
       </Ul>
       {showAvailableBooks && <Books showAvailableBooks={showAvailableBooks} />}
     </Container>
@@ -63,7 +61,7 @@ const Li = styled.li`
    cursor: pointer;
 
     width: 30rem;
-    background-image: url(/public/texture.jpeg);
+    background-image: url(/texture.jpeg);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,6 +73,13 @@ const Li = styled.li`
     font-size: 2.5rem;
     font-weight: 600;
     cursor: pointer;
+    &:hover{
+      color: white;
+      background-image: url(/.jpeg);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.867); 
+
+    }
+
 `
 const Ul = styled.ul`
     display: flex;
