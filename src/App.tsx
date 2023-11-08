@@ -20,16 +20,6 @@ import Registration from "./components/Registration";
 
 function App() {
 
-    // const { data, isLoading, isError } = useQuery('jsonData', fetchData);
-
-    // if (isLoading) {
-    //   return <div>Loading...</div>;
-    // }
-  
-    // if (isError) {
-    //   return <div>Error fetching data</div>;
-    // }
-
   return (
     <Router>
     <Routes>

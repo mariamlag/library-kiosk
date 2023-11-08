@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import styled from 'styled-components'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Books from './Books';
 import Categories from './categories';
-import Return from './Return';
 import { Link } from 'react-router-dom';
 
 
@@ -32,11 +30,9 @@ export default function Landing() {
             {showAvailableBooks && (
                 <>
                     <Categories onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory} />
-                    {selectedCategory && <Books  selectedCategory={selectedCategory}/>}
-                  
+                    {selectedCategory && <Books  selectedCategory={selectedCategory}/>} 
              </>  
                 )}       
-            {returnVisible && <Return />} 
     </Main>
   )
 }
@@ -66,8 +62,6 @@ const SharedButton = styled.button`
     background-color: #5d4e46;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867); 
     }
-
-
 `;
 const Returnn = styled(SharedButton)`
     margin-top: 2rem;

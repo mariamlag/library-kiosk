@@ -1,66 +1,67 @@
-import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components';
-import data from '../../data.json'
 import Registration from './Registration';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-
-export default function Log({thisBook}) {
-
+// interface LogProps {
+//     thisBook?: {
+//         title: string;
+//         id: string;
+//         category: string;
+//         isBorrowed: boolean;
+//       };
+//   }
+  
+export default function Log() {
+    const location = useLocation();
+    console.log(location.state);
     const [username, setUsername]=useState('');
-    const [user, setUser] =useState<any>(null);
     const [password, setPassword]=useState('');
-    // const[borrowedBooks, setBorrowedBooks] =useState('');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    // const [bookId, setBookId]=useState('');
     const [message, setMessage] = useState('');
-    const [registrationSuccess, setRegistrationSuccess] = useState(false);
-    console.log(user)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [registrationSuccess] = useState(false);
+
     const handleLog = async () => {
          
-        // const book = data.books.find((book) => book.id === borrowedBooks);
-        // const Books = data.books.find(id);
         try {
-          // Send a GET request to fetch user information
+
           const response = await fetch(`http://localhost:3032/user?username=${username}&password=${password}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
-              // Add any other headers you need
             },
           });
         
           if (response.ok) {
             const userData = await response.json();
-            console.log(userData);
-            // setUser(userData);
+
             if (userData.length === 1) {
-              // User found, perform your actions here
               setMessage('Take successful');
-            // const user = userData[0]; // Assuming there's only one user with a given username and password
-            // console.log(data.books, "mar")
-            const updatedBorrowedBooks = userData && [...user.borrowedBooks, thisBook];
-                console.log(userData.id, 'mariam')
-            // Send a PUT request to update the user's borrowedBooks
-            const updateResponse = await fetch(`http://localhost:3032/users/${userData.id}`, {
-              method: 'PUT', // Use PUT to update the user's data
-              headers: {
-                'Content-Type': 'application/json',
-                // Add any other headers you need
-              },
-              body: JSON.stringify({ ...user, borrowedBooks: updatedBorrowedBooks }),
-            });
-            console.log(updateResponse);
-           
+              const updatedBorrowedBooks = [...userData[0].borrowedBooks, {...location.state.key, isBorrowed: true}];
 
-            } else {
-              // No user found with the provided credentials
-              setMessage('Invalid username or password');
+              const updateResponse = await fetch(`http://localhost:3032/user/${userData[0].id}`, {
+                method: 'PUT', 
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ...userData[0], borrowedBooks: updatedBorrowedBooks }),
+              });
+                console.log(updateResponse);
 
-            }
+                const updateBooks = await fetch(`http://localhost:3032/books/${location.state.key.id}`, {
+                method: 'PUT', 
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ...location.state.key, isBorrowed: true }),
+              });
+              console.log(updateBooks);
+
+              } else {
+                setMessage('Invalid username or password');
+              }
+
           } else {
-            // Handle the response if it's not OK (e.g., server error)
             setMessage('An error occurred while logging in');
           }
         } catch (error) {
@@ -69,36 +70,8 @@ export default function Log({thisBook}) {
         }
       };
       
-
-    // const handleLog = () => {
-    //     // Find the book in the data by ID
-    //     const book = data.books.find((book) => book.id === bookId);
-    
-    //     // if (!book) {
-    //     //   setMessage('Book not found');
-    //     //   return;
-    //     // }
-    //     // console.log(setMessage)
-    //     // Check if the book is borrowed
-    //     // if (!book.isBorrowed) {
-    //       // Check if the username and password match (simulated check for demonstration)
-        
-    //       if (username === 'yourUsername' && password === 'yourPassword') {
-    //         // Simulate the return of the book by updating its status
-    //         // book.isBorrowed = false;
-    //         setMessage('Take successful');
-    //       } else {
-    //         setMessage('Invalid username or password');
-    //       }
-    //     // } else {
-    //     //   setMessage('Book is not borrowed');
-    //     // };
-    // //   };
-
-    //     }
   return (
     <Main>
-       
         <Name   type='text' 
             placeholder='Username' 
             value={username} 
@@ -115,14 +88,7 @@ export default function Log({thisBook}) {
         
       <Link to="/registration" className="link-no-underline">
         <ButtonRegist >Not yet registered? Register</ButtonRegist>
-        {/* onClick={() => setRegistrationSuccess(true)} */}
       </Link>
-{/* 
-        {registrationSuccess ? (
-            <Message>Registration successful. You can now log in.</Message>
-             ) : (
-            <ButtonRegist onClick={<Registration/>}>Not yet registered? Register</ButtonRegist>
-      )} */}
         <Message>{message}</Message>
         {registrationSuccess && <Registration/>}
     </Main>
@@ -143,7 +109,6 @@ const ButtonRegist = styled.button`
     margin-top: 1rem;
     cursor: pointer;
 `
-
 const Main = styled.div`
     width: 100vw;
     height: 100vh;
@@ -192,7 +157,6 @@ const Password = styled(Input)`
 `
 const Name = styled(Input)`
 `
-
 const ButtonLog = styled.button`
  display: flex;
     align-items: center;
