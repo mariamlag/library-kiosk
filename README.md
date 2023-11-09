@@ -14,7 +14,7 @@ Welcome to the Library Kiosk Front-End Application repository! This project is a
 
 ### Screenshots
 
-![Landing Page](/screenshots/landing.png)
+![Landing Page](./public/screenshots/landing.png)
 _Landing Page_
 
 ![Borrow Books](./public/screenshots/books.png)
