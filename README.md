@@ -17,19 +17,19 @@ Welcome to the Library Kiosk Front-End Application repository! This project is a
 ![Landing Page](/screenshots/landing.png)
 _Landing Page_
 
-![Borrow Books](/screenshots/books.png)
+![Borrow Books](./public/screenshots/books.png)
 _Borrow Books _
 
-![Registration](/screenshots/categories.png)
+![Registration](./public/screenshots/registration.png)
 _Categories _
 
-![Return Books](/screenshots/return.png)
+![Return Books](./public/screenshots/return.png)
 _Return Books _
 
-![Take Books](/screenshots/login.png)
+![Take Books](./public/screenshots/login.png)
 _Takes Books _
 
-![Registration](/screenshots/registration.png)
+![Registration](./public/screenshots/registration.png)
 _Registration _
 
 ### Introduction
