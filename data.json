@@ -3,216 +3,20 @@
     {
       "username": "mariam12",
       "password": "mariam12",
+      "borrowedBooks": [],
       "id": 1
     },
     {
-      "username": "mari123",
-      "password": "mari123",
+      "username": "sss123",
+      "password": "sss123",
+      "borrowedBooks": [],
       "id": 2
     },
     {
-      "username": "mari11",
-      "password": "mari11",
-      "id": 3
-    },
-    {
-      "username": "mmm123",
-      "password": "mmm123",
-      "id": 4
-    },
-    {
-      "username": "mmm12",
-      "password": "mmm12",
-      "borrowedBooks": [],
-      "id": 5
-    },
-    {
-      "username": "mmm12",
-      "password": "mmm12",
-      "borrowedBooks": [],
-      "id": 6
-    },
-    {
-      "borrowedBooks": [
-        [],
-        null
-      ],
-      "id": 7
-    },
-    {
-      "0": {
-        "username": "zur12",
-        "password": "zur12",
-        "borrowedBooks": [],
-        "id": 8
-      },
-      "borrowedBooks": [
-        null,
-        null
-      ],
-      "id": 8
-    },
-    {
-      "username": "zur1234",
-      "password": "zur1234",
-      "borrowedBooks": [
-        [
-          [],
-          null
-        ],
-        null
-      ],
-      "id": 9
-    },
-    {
       "username": "lagazauri12",
-      "password": "lagazauri12",
-      "borrowedBooks": [
-        [
-          [
-            [],
-            null
-          ],
-          null
-        ],
-        {
-          "id": "9w0x1y2z",
-          "title": "The Shining",
-          "isBorrowed": false,
-          "about": "A horror novel by Stephen King. A family's experience in a haunted hotel.",
-          "category": "Horror"
-        }
-      ],
-      "id": 10
-    },
-    {
-      "username": "maril123",
-      "password": "maril123",
-      "borrowedBooks": {
-        "0": {
-          "0": [
-            [],
-            {
-              "id": "7y8z9a0b",
-              "title": "To Kill a Mockingbird",
-              "isBorrowed": false,
-              "about": "A novel by Harper Lee. The story of racial injustice in the American South.",
-              "category": "Coming-of-Age Novels"
-            }
-          ],
-          "1": {
-            "id": "1i2j3k4l",
-            "title": "The Giver",
-            "isBorrowed": false,
-            "about": "A dystopian novel by Lois Lowry. The story of a world without pain.",
-            "category": "Dystopian Fiction"
-          },
-          "isBorrowed": true
-        },
-        "1": {
-          "id": "1i2j3k4l",
-          "title": "The Giver",
-          "isBorrowed": false,
-          "about": "A dystopian novel by Lois Lowry. The story of a world without pain.",
-          "category": "Dystopian Fiction"
-        },
-        "isBorrowed": true
-      },
-      "id": 11
-    },
-    {
-      "username": "lagazaurii12",
       "password": "lagazaurii12",
-      "borrowedBooks": {
-        "0": [],
-        "1": {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": false,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        },
-        "isBorrowed": true
-      },
-      "id": 12
-    },
-    {
-      "username": "temuri11",
-      "password": "temuri11",
-      "borrowedBooks": [
-        [],
-        {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": false,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        },
-        {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": true,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        }
-      ],
-      "id": 13
-    },
-    {
-      "username": "mm1122",
-      "password": "mm1122",
-      "borrowedBooks": [
-        {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": false,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        },
-        {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": true,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        },
-        {
-          "id": "3u4v5w6x",
-          "title": "The Catcher in the Rye",
-          "isBorrowed": true,
-          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
-          "category": "Coming-of-Age Novels"
-        },
-        {
-          "id": "7s8t9u0v",
-          "title": "Moby-Dick",
-          "isBorrowed": true,
-          "about": "A novel by Herman Melville. The story of Captain Ahab's obsessive quest to catch a giant white whale.",
-          "category": "Classic Literature"
-        },
-        {
-          "id": "9y0z1a2b",
-          "title": "The Kite Runner",
-          "isBorrowed": true,
-          "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
-          "category": "Literary Fiction"
-        },
-        {
-          "id": "7e8f9g0h",
-          "title": "The Kite Runner",
-          "isBorrowed": true,
-          "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
-          "category": "Literary Fiction"
-        },
-        {
-          "id": "7e8f9g0h",
-          "title": "The Kite Runner",
-          "isBorrowed": true,
-          "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
-          "category": "Literary Fiction"
-        }
-      ],
-      "id": 14
+      "borrowedBooks": [],
+      "id": 3
     }
   ],
   "books": [
@@ -266,13 +70,6 @@
       "category": "Classic Literature"
     },
     {
-      "id": "9c0d1e2f",
-      "title": "The Lord of the Rings",
-      "isBorrowed": false,
-      "about": "A fantasy novel by J.R.R. Tolkien. It follows the journey to destroy a powerful ring.",
-      "category": "Fantasy Novels"
-    },
-    {
       "id": "3g4h5i6j",
       "title": "The Hobbit",
       "isBorrowed": true,
@@ -301,25 +98,11 @@
       "category": "Mystery/Thriller"
     },
     {
-      "id": "9w0x1y2z",
-      "title": "The Shining",
-      "isBorrowed": false,
-      "about": "A horror novel by Stephen King. A family's experience in a haunted hotel.",
-      "category": "Horror"
-    },
-    {
       "id": "3a4b5c6d",
       "title": "The Road",
       "isBorrowed": false,
       "about": "A post-apocalyptic novel by Cormac McCarthy. A father and son's journey to survival.",
       "category": "Post-Apocalyptic Fiction"
-    },
-    {
-      "id": "7e8f9g0h",
-      "title": "The Kite Runner",
-      "isBorrowed": false,
-      "about": "A novel by Khaled Hosseini. The story of friendship and betrayal in Afghanistan.",
-      "category": "Literary Fiction"
     },
     {
       "id": "1i2j3k4l",
@@ -352,7 +135,7 @@
     {
       "id": "7y8z9a0b",
       "title": "To Kill a Mockingbird",
-      "isBorrowed": false,
+      "isBorrowed": true,
       "about": "A novel by Harper Lee. The story of racial injustice in the American South.",
       "category": "Coming-of-Age Novels"
     },
@@ -432,13 +215,6 @@
       "isBorrowed": false,
       "about": "A horror novel by Stephen King. A family's experience in a haunted hotel.",
       "category": "Horror"
-    },
-    {
-      "id": "5u6v7w8x",
-      "title": "The Road",
-      "isBorrowed": false,
-      "about": "A post-apocalyptic novel by Cormac McCarthy. A father and son's journey to survival.",
-      "category": "Post-Apocalyptic Fiction"
     },
     {
       "id": "9y0z1a2b",

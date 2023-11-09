@@ -1,15 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 
 export default function Registration() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [username, setUsername] = useState("");
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [password, setPassword] = useState("");
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
-
   const handleRegister = async () => {
     if (
       password.match(/[a-z]/) &&
@@ -50,7 +45,6 @@ export default function Registration() {
       ></Password>
 
       <Button onClick={handleRegister}>Register</Button>
-      {/* <Button onClick={() => navigate("/log")}>Login</Button> */}
       {registrationSuccess ? (
         <Succ>Registration successful. You can now log in.</Succ>
       ) : (
@@ -89,20 +83,7 @@ const Log = styled.div`
   margin: 0;
   background-size: cover;
 `;
-// const Message = styled.div`
-//     font-size: 3rem;
-//     color: #ff0000;
-//     font-weight: 550;
-//     width: fit-content;
-//     height: fit-content;
-//     background-color: #0000009a;
-//     border: 1px solid red;
-//     border-radius: 1rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin-top: 1rem;
-// `
+
 const Input = styled.input`
   display: flex;
   align-items: center;
@@ -135,4 +116,5 @@ const Button = styled.button`
   border-radius: 1rem;
   border: 2px solid black;
   margin-top: 1rem;
+  cursor: pointer;
 `;

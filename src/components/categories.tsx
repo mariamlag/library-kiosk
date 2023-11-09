@@ -4,31 +4,15 @@ import data from "../../data.json";
 import styled from "styled-components";
 import Books from "./Books";
 
-type Book = {
-  title: string;
-  id: string;
-  category: string;
-  isBorrowed: boolean;
-};
-
-type CategoriesProps = {
-  onSelectCategory: (category: string) => void;
-  selectedCategory: string;
-};
-
 function Categories({ onSelectCategory, selectedCategory }: CategoriesProps) {
-  const categories: string[] = data.books.reduce((acc, book) => {
+  const categories: string[] = data.books.reduce((acc: string[], book) => {
     if (book.category && !acc.includes(book.category)) {
       acc.push(book.category);
     }
     return acc;
   }, []);
 
-  const [showAvailableBooks, setShowAvailableBooks] = useState(false);
-
-  const toggleBooks = () => {
-    setShowAvailableBooks(!showAvailableBooks);
-  };
+  const [showAvailableBooks] = useState(false);
 
   return (
     <Container>
@@ -40,7 +24,7 @@ function Categories({ onSelectCategory, selectedCategory }: CategoriesProps) {
         ))}
         <Li onClick={() => onSelectCategory("All")}>All</Li>
       </Ul>
-      {showAvailableBooks && <Books showAvailableBooks={showAvailableBooks} />}
+      {showAvailableBooks && <Books selectedCategory={selectedCategory} />}
     </Container>
   );
 }

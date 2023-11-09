@@ -1,16 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
-// import { useQuery } from 'react-query';
 import styled, { css } from "styled-components";
 import data from "../../data.json";
 import { useNavigate } from "react-router-dom";
-
-// interface Book {
-//     id: string;
-//     title: string;
-//     about: string;
-//     isBorrowed: boolean;
-//   }
 
 export default function Books({
   selectedCategory,
@@ -19,8 +11,6 @@ export default function Books({
 }) {
   const navigate = useNavigate();
   const [thisBook, setThisBook] = useState<any>();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [logVisible, setLogVisible] = useState(false);
   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -28,7 +18,7 @@ export default function Books({
     if (thisBook) {
       navigate("/log", { state: { key: thisBook } });
     }
-  }, [thisBook]);
+  }, [navigate, thisBook]);
 
   const filteredBooks =
     selectedCategory === "All"
@@ -59,7 +49,6 @@ export default function Books({
               <Book
                 onClick={() => {
                   setThisBook(book);
-                  setLogVisible(true);
                 }}
               >
                 <h1>{book.title}</h1>
@@ -105,9 +94,6 @@ const Pagination = styled.div`
   background-color: white;
   color: #ffffff;
 `;
-type TpageButton = {
-  active: string;
-};
 const PageButton = styled.button<TpageButton>`
   ${(props) => css`
     background: ${eval(props.active) ? "#ffffff;" : "#5d4e46"};

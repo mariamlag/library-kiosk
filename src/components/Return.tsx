@@ -1,74 +1,11 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export default function Return() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [bookId, setBookId] = useState("");
   const [message, setMessage] = useState("");
-
-  // const handleReturn = async () => {
-  //     // Find the book in the data by ID
-  //     try {
-  //       // Send a GET request to fetch user information
-  //       const response = await fetch(`http://localhost:3032/user?username=${username}&password=${password}&borrowedBooks?id=${bookId}`, {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           // Add any other headers you need
-  //         },
-  //       });
-
-  //     if (!bookId) {
-  //       setMessage('Book not found');
-  //       return;
-  //     }
-  //     console.log(setMessage)
-  //     // Check if the book is borrowed
-  //     // if (book.isBorrowed)
-  //     if (response.ok) {
-  //       // const userData = await response.json();
-
-  //         // const updateResponse = await fetch(`http://localhost:3032/user/${userData[0].id}`, {
-  //         //   method: 'PUT',
-  //         //   headers: {
-  //         //     'Content-Type': 'application/json',
-  //         //   },
-  //         //   body: JSON.stringify({ ...userData[0], borrowedBooks: updatedBorrowedBooks }),
-  //         // });
-  //         // console.log(updateResponse);
-
-  //         setMessage('Return successful');
-  //       } else {
-  //         setMessage('Invalid username or password');
-  //       }
-
-  //     }
-
-  //   catch (error) {
-  //     // Handle any network or other errors
-  //     setMessage('An error occurred');
-  //   }
-  // };
-  //   const updateBookStatus = async (bookId, isBorrowed) => {
-  //     try {
-  //         const response = await fetch(`http://localhost:3032/books/${bookId}`, {
-  //             method: 'PUT',
-  //             headers: {
-  //                 'Content-Type': 'application/json',
-  //             },
-  //             body: JSON.stringify({ isBorrowed: isBorrowed }),
-  //         });
-
-  //         if (response.ok) {
-  //             // The book status has been updated successfully
-  //         } else {
-  //             // Handle the response if the update fails
-  //         }
-  //     } catch (error) {
-  //         // Handle any network or other errors
-  //     }
-  // };
 
   const handleReturn = async () => {
     try {
@@ -106,17 +43,17 @@ export default function Return() {
               }),
             });
 
-            const updatedBooks = user.borrowedBooks.splice(i, 1);
-            await fetch(
-              `http://localhost:3032/user?username=${username}&password=${password}`,
-              {
-                method: "PUT",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ ...user, borrowedBooks: updatedBooks }),
-              }
-            );
+            const updatedBooks = [...user.borrowedBooks];
+            console.log(updatedBooks[i], "returned book");
+            updatedBooks.splice(i, 1);
+            console.log(updatedBooks);
+            await fetch(`http://localhost:3032/user/${user.id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ ...user, borrowedBooks: updatedBooks }),
+            });
             break;
           } else {
             setMessage("Invalid username or password");
@@ -124,7 +61,6 @@ export default function Return() {
         }
       }
     } catch (error) {
-      // Handle any network or other errors
       setMessage("An error occurred");
     }
   };
@@ -150,7 +86,7 @@ export default function Return() {
         onChange={(e) => setPassword(e.target.value)}
       ></Password>
       <ButtonLog onClick={handleReturn}>Return</ButtonLog>
-      <Message>{message}</Message>
+      <Message message={message}>{message}</Message>
     </Main>
   );
 }
@@ -168,21 +104,24 @@ const Main = styled.div`
   margin: 0;
   background-size: cover;
 `;
-const Message = styled.div`
-  font-size: 3rem;
-  color: #ff0000;
-  font-weight: 550;
-  width: fit-content;
-  height: fit-content;
-  /* background-color: #0000009a; */
-  border: 1px solid red;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
+const Message = styled.div<Tmessage>`
+  ${(props) => css`
+    color: ${props.message === "Return successful" ? "#008005" : "#ff0000"};
+
+    font-size: 3rem;
+    font-weight: 550;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
+  `}
 `;
+
 const Input = styled.input`
   display: flex;
   align-items: center;
@@ -217,4 +156,5 @@ const ButtonLog = styled.button`
   border: 2px solid transparent;
   margin-top: 1rem;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
+  cursor: pointer;
 `;
