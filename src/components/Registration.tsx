@@ -68,6 +68,9 @@ const Succ = styled.div`
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Log = styled.div`
@@ -98,6 +101,12 @@ const Input = styled.input`
   margin: 0 auto;
   border-radius: 1rem;
   margin-top: 1rem;
+  @media (max-width: 375px) {
+    width: 25rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+  }
 `;
 const Password = styled(Input)``;
 const UserName = styled(Input)``;
@@ -117,4 +126,10 @@ const Button = styled.button`
   border: 2px solid black;
   margin-top: 1rem;
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 27rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+  }
 `;

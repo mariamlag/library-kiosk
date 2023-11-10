@@ -38,12 +38,15 @@ export default function Landing() {
 
 const Main = styled.div`
   display: flex;
-  /* height: 100vh; */
   flex-direction: column;
-  /* background-image: url(/2150793709.jpg); */
+  justify-content: center;
+  align-items: center;
   padding: 10rem;
   background-position: center;
   background-size: cover;
+  @media (max-width: 375px) {
+    margin: 3rem;
+  }
 `;
 const SharedButton = styled.button`
   display: flex;
@@ -64,6 +67,11 @@ const SharedButton = styled.button`
     background-color: #5d4e46;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867);
   }
+
+  @media (max-width: 375px) {
+    font-size: 1rem;
+    padding: 0.9rem 5rem;
+  }
 `;
 const Returnn = styled(SharedButton)`
   margin-top: 2rem;
@@ -71,9 +79,14 @@ const Returnn = styled(SharedButton)`
   margin: 3rem auto;
   height: fit-content;
   text-decoration: none;
+  @media (max-width: 375px) {
+    width: 25rem;
+  }
 `;
 const Borrow = styled(SharedButton)`
   width: 50rem;
   height: fit-content;
-  margin: 0 auto;
+  @media (max-width: 375px) {
+    width: 25rem;
+  }
 `;

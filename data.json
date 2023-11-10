@@ -17,6 +17,20 @@
       "password": "lagazaurii12",
       "borrowedBooks": [],
       "id": 3
+    },
+    {
+      "username": "aaa1",
+      "password": "aaa1",
+      "borrowedBooks": [
+        {
+          "id": "3u4v5w6x",
+          "title": "The Catcher in the Rye",
+          "isBorrowed": true,
+          "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
+          "category": "Coming-of-Age Novels"
+        }
+      ],
+      "id": 4
     }
   ],
   "books": [
@@ -128,7 +142,7 @@
     {
       "id": "3u4v5w6x",
       "title": "The Catcher in the Rye",
-      "isBorrowed": false,
+      "isBorrowed": true,
       "about": "A novel by J.D. Salinger. The story of Holden Caulfield's experiences in New York City.",
       "category": "Coming-of-Age Novels"
     },

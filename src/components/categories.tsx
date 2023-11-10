@@ -53,6 +53,11 @@ const Li = styled.li`
     background-image: url(/.jpeg);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867);
   }
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 20rem;
+  }
 `;
 const Ul = styled.ul`
   display: flex;
@@ -60,9 +65,12 @@ const Ul = styled.ul`
   flex-wrap: wrap;
   gap: 2rem;
   color: #5d4e46;
+  padding: 0;
 `;
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width: fit-content;
 `;

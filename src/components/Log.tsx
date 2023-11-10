@@ -110,6 +110,11 @@ const ButtonRegist = styled.button`
   border-radius: 1rem;
   margin-top: 1rem;
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 25rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
 `;
 const Main = styled.div`
   width: 100vw;
@@ -120,9 +125,11 @@ const Main = styled.div`
   flex-direction: column;
   background-image: url(/background-img.jpeg);
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: center;
+  background-size: cover;
   margin: 0;
-  background-size: 100%;
+  @media (max-width: 375px) {
+  }
 `;
 const Message = styled.div<Tmessage>`
   ${(props) => css`
@@ -140,6 +147,10 @@ const Message = styled.div<Tmessage>`
     margin-top: 1rem;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
   `}
+  @media (max-width: 375px) {
+    height: 4rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const Input = styled.input`
@@ -157,6 +168,12 @@ const Input = styled.input`
   border-radius: 1rem;
   margin-top: 1rem;
   box-shadow: 0 0 20px rgba(177, 253, 249, 0.867);
+  @media (max-width: 375px) {
+    width: 25rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+  }
 `;
 const Password = styled(Input)``;
 const Name = styled(Input)``;
@@ -176,4 +193,10 @@ const ButtonLog = styled.button`
   margin-top: 1rem;
   box-shadow: 0 0 20px rgba(177, 253, 249, 0.867);
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 27rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+  }
 `;
