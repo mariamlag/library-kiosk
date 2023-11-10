@@ -44,7 +44,7 @@ const Main = styled.div`
   padding: 10rem;
   background-position: center;
   background-size: cover;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     margin: 3rem;
   }
 `;
@@ -68,7 +68,7 @@ const SharedButton = styled.button`
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867);
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     font-size: 1rem;
     padding: 0.9rem 5rem;
   }
@@ -79,14 +79,14 @@ const Returnn = styled(SharedButton)`
   margin: 3rem auto;
   height: fit-content;
   text-decoration: none;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 25rem;
   }
 `;
 const Borrow = styled(SharedButton)`
   width: 50rem;
   height: fit-content;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 25rem;
   }
 `;

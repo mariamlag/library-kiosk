@@ -53,14 +53,7 @@ export default function Registration() {
     </Log>
   );
 }
-const P = styled.div`
-  /* color: #ffffff;
-    font-size: 2rem;
-    background-color: #aa2622;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-top: 1rem; */
-`;
+const P = styled.div``;
 const Succ = styled.div`
   color: #ffffff;
   font-size: 2.5rem;

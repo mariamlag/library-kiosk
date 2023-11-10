@@ -53,7 +53,7 @@ const Li = styled.li`
     background-image: url(/.jpeg);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867);
   }
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     font-size: 1.5rem;
     padding: 1.5rem;
     width: 20rem;

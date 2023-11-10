@@ -120,7 +120,7 @@ const Message = styled.div<Tmessage>`
     margin-top: 1rem;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
   `}
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     height: 4rem;
     font-size: 1.5rem;
   }
@@ -141,7 +141,7 @@ const Input = styled.input`
   border-radius: 1rem;
   margin-top: 1rem;
   box-shadow: 0 0 20px rgba(0, 166, 255, 0.956);
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 25rem;
     height: 4rem;
     font-size: 1.5rem;
@@ -166,7 +166,7 @@ const ButtonLog = styled.button`
   margin-top: 1rem;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.956);
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 27rem;
     height: 4rem;
     font-size: 1.5rem;

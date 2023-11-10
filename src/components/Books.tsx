@@ -93,7 +93,7 @@ const Pagination = styled.div`
   border-style: none;
   background-color: white;
   color: #ffffff;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 25rem;
     height: 3rem;
   }
@@ -114,10 +114,13 @@ const PageButton = styled.button<TpageButton>`
       background-color: #5d4e46;
     }
   `}
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 const Container = styled.div`
@@ -148,7 +151,7 @@ const Book = styled.div`
   &:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.867);
   }
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 20rem;
     font-size: 1.5rem;
   }
