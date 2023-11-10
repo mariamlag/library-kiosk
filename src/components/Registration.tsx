@@ -61,7 +61,7 @@ const Succ = styled.div`
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     font-size: 1.5rem;
   }
 `;
@@ -94,7 +94,7 @@ const Input = styled.input`
   margin: 0 auto;
   border-radius: 1rem;
   margin-top: 1rem;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 25rem;
     height: 4rem;
     font-size: 1.5rem;
@@ -119,7 +119,7 @@ const Button = styled.button`
   border: 2px solid black;
   margin-top: 1rem;
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 27rem;
     height: 4rem;
     font-size: 1.5rem;
